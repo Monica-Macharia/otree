@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h2>Punish Decision</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.punish_decision.id_for_label }}">{{ form.punish_decision.label }}</label>
+        <select name="{{ form.punish_decision.name }}" id="{{ form.punish_decision.id_for_label }}" required>
+            {% for choice in form.punish_decision.field.choices %}
+                <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

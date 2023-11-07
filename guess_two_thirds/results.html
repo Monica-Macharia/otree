@@ -1,0 +1,10 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h2>Results</h2>
+    <p>Your decision: {% if player.group.punish_decision %}Punish Player 1{% else %}Not Punish Player 1{% endif %}</p>
+    <p>Your earnings: {{ player.payoff }}</p>
+    <p>Player 1's earnings: {{ group.get_player_by_id(1).payoff }}</p>
+    <br>
+    <p>Thank you for participating in the Mini Ultimatum Game!</p>
+{% endblock %}

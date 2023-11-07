@@ -1,0 +1,13 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <h2>Send Money</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.sent_amount.id_for_label }}">{{ form.sent_amount.label }}</label>
+        <input type="number" name="{{ form.sent_amount.name }}" id="{{ form.sent_amount.id_for_label }}"
+               min="{{ form.sent_amount.field.min }}" max="{{ form.sent_amount.field.max }}" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

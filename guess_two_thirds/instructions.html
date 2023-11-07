@@ -7,21 +7,10 @@
     </h3>
 
     <p>
-        You are in a group of {{ C.PLAYERS_PER_GROUP }} people.
-        Each of you will be asked to choose a
-        number between 0 and {{ C.GUESS_MAX }}.
+        You are in a group of 3 players.
+        two of you will be asked to choose an amount
+        between 0 and 200. The second player will review the amount
+        selected and decide whether to punish or not punish the player.
         The winner will be the participant whose
-        number is closest to 2/3 of the
-        average of all chosen numbers.
+        amount is not punished.
     </p>
-
-    <p>
-        The winner will receive {{ C.JACKPOT }}.
-        In case of a tie, the {{ C.JACKPOT }}
-        will be equally divided among winners.
-    </p>
-
-    <p>This game will be played for {{ C.NUM_ROUNDS }} rounds.</p>
-
-</div>
-</div>

@@ -1,8 +1,9 @@
-{{ block title }}Introduction{{ endblock }}
-{{ block content }}
+{% extends "global/Page.html" %}
 
-    {{ include_sibling 'instructions.html' }}
-
-    {{ next_button }}
-
-{{ endblock }}
+{% block content %}
+    <h2>Introduction</h2>
+    <p>Welcome to the Mini Ultimatum Game.</p>
+    <p>In this game, you will make decisions about sending money to another player and a third player who will decide whether to punish you or not.</p>
+    <p>At the end of the game, your earnings will be calculated.</p>
+    <button>Next</dutton>
+{% endblock %}
