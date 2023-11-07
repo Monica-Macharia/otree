@@ -1,0 +1,11 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.capital_city }}
+        {{ form.math_question }}
+        {{ form.population_question }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
